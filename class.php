@@ -24,7 +24,7 @@ if (isset($_SERVER['REQUEST_METHOD']) == 'POST') {
 
     $parameter = array(
         "chat_id" => $userId,
-        "text" => $msg,
+        "text" => urlencode($msg),
         "reply_markup" => $encodedKeyboard
     );
     // var_dump($parameter);
